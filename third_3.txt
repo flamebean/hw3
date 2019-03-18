@@ -1,0 +1,26 @@
+%third_3.m
+clear;
+% [f1,map_f1]=imread('C:\Users\15pr\Desktop\第三次\第3-次作业\lena1.bmp');%带增强图
+% [f2,map_f2]=imread('C:\Users\15pr\Desktop\第三次\第3-次作业\lena.bmp');%目标图
+% map_f1(end:255,:)=0;
+% %map_f2(end:255,:)=0;
+% f1=ind2gray(f1,map_f1);
+% %f2=ind2gray(f2,map_f1);
+f1=read_pic('C:\Users\15pr\Desktop\第三次\第3-次作业\citywall2.bmp');
+f2=read_pic('C:\Users\15pr\Desktop\第三次\第3-次作业\citywall.bmp');
+h=imhist(f2,256);%计算目标图的s
+g=histeq(f1,h);
+figure;
+subplot(1,2,1)
+imshow(f1)
+title('待增强图')
+subplot(1,2,2)
+imshow(g)
+title('输出图像')
+figure;
+subplot(3,1,1)
+zhifangtu(f1)
+subplot(3,1,2)
+zhifangtu(f2)
+subplot(3,1,3)
+zhifangtu(g)

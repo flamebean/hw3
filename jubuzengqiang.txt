@@ -1,0 +1,14 @@
+%jubuzengqiang.m
+function pic=jubuzengqiang(img)
+
+pic_big= padarray(img, [3 3], 'replicate', 'both');
+for i=1:1:size(img,1)
+    for j=1:1:size(img,2)
+        part_pic=pic_big(i:i+6,j:j+6);
+        g=histeq(part_pic,256);
+        part_big(i:i+6,j:j+6)=g(:,:);
+    end
+end
+pic(1:512,1:512)=part_big(4:515,4:515);
+end        
+        

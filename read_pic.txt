@@ -1,0 +1,6 @@
+%%%read_pic.m
+function pic=read_pic(URL)
+[f,map_f]=imread(URL);
+map_f(end:255,:)=0;
+pic=ind2gray(f,map_f);
+end

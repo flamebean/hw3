@@ -1,0 +1,7 @@
+f=read_pic('C:\Users\15pr\Desktop\第三次\第3-次作业\elain.bmp');
+fout=jubuzengqiang(f);
+figure;
+subplot(1,2,1)
+imshow(f)
+subplot(1,2,2)
+imshow(fout)

@@ -1,0 +1,9 @@
+%%%zhifangtu.m
+function zhifangtu(pic)
+h_orgin=imhist(pic,256);
+horz=linspace(0,255,256);
+bar(horz,h_orgin)
+axis tight
+xlabel('grey')
+ylabel('num')
+end

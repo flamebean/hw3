@@ -1,0 +1,21 @@
+%third_5
+clear;
+f=read_pic('C:\Users\15pr\Desktop\第三次\第3-次作业\woman.bmp');
+zhifangtu(f);
+figure;
+imshow(f);
+% xiaxian=120;
+% shangxian=160;
+% for i=1:512
+%     for j=1:512
+%         if(f(i,j)<=shangxian&&f(i,j)>=xiaxian)
+%          f(i,j)=0;;    
+%         else
+%             f(i,j)=255;
+%         end
+%     end
+% end
+level=graythresh(f);
+fout=im2bw(f,level);
+figure
+imshow(fout)
